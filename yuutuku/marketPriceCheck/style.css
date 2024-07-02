@@ -1,0 +1,69 @@
+@charset 'UTF-8';
+.card_wrapper{
+    background-image: url(./images/noimage_効果モンスター.jpg);
+    background-size: cover;
+    width: 250px;
+    height: 360px;
+    position: relative;
+    margin: 0 auto;
+}
+.card_name{
+    color: #000;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 16px;
+    position: absolute;
+    top: 0.1%;
+    left: 8%;
+}
+.card_name::after{
+    content:'';
+    display: inline-block;
+    background-image: url(./images/yami.png);
+    background-size: contain;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+}
+.lebel_area{
+    height: 20px;
+    width: 90%;
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: end;
+}
+/* .card_lebel{
+    position: absolute;
+    top: 11%;
+    right: 5%;
+} */
+.card_image{
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card_text{
+    width: 85%;
+    height: 18%;
+    background-color: rgba(245, 165, 67, 0.267);
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5px;
+    padding: 3px;
+    font-weight: 200;
+}
+.card_text_detail{
+    width: 85%;
+    height: 18%;
+    background-color: rgba(245, 165, 67, 0.267);
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 500;
+}
