@@ -7,29 +7,31 @@
     position: relative;
     margin: 0 auto;
 }
+.card_name_wrapper{
+    position: absolute;
+    width: 85%;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .card_name{
     color: #000;
     font-weight: 550;
     font-size: 16px;
-    line-height: 16px;
-    position: absolute;
-    top: 0.1%;
-    left: 8%;
 }
-.card_name::after{
-    content:'';
-    display: inline-block;
-    background-image: url(./images/yami.png);
-    background-size: contain;
-    vertical-align: middle;
-    width: 18px;
-    height: 18px;
-}
+/* .card_element{
+    display: ;
+} */
+
 .lebel_area{
     height: 20px;
     width: 90%;
     position: absolute;
-    top: 11%;
+    top: 11.5%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;

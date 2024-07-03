@@ -2,11 +2,11 @@
 $kinds=$_POST['kinds'];
 $card_name=$_POST['cardname'];
 $card_image=$_FILES['cardimage'];
+$kinds_monster=$_POST['kinds-monster'];
+$element=$_POST['element'];
+$species=$_POST['species'];
 $lebel=$_POST['lebel'];
 $text=$_POST['text'];
-// $typenumber1=$_POST['typenumber1'];
-// $typenumber2=$_POST['typenumber2'];
-
 
 
 ?>
@@ -21,7 +21,11 @@ $text=$_POST['text'];
 <body>
     下記のカードを追加しますか？<br><br>
     <div class="card_wrapper">
-        <?php echo '<p class="card_name">'.$card_name.'</p>';?><br>
+        <div class="card_name_wrapper">
+        <?php echo '<p class="card_name">'.$card_name.'</p>';?>
+        <?php echo'<img class="card_element" width="20" height="20" src="./images/'.$element.'.png">'?>
+        
+        </div>
         <div class="lebel_area">
             <?php
                 if($lebel=='nothing'){
@@ -43,13 +47,25 @@ $text=$_POST['text'];
             }
         } 
         ?>
-        <?php echo '<div class=card_text>'.$text.'</div>'?>
+        <?php 
+            if($kinds_monster=='通常'||$kinds_monster=='効果'){
+                echo '<div class=card_text><span>【'.$species.'/'.$kinds_monster.'】</span><br>'.$text.'</div>';
+            }else{
+            echo '<div class=card_text><span>【'.$species.'/'.$kinds_monster.'/効果】</span><br>'.$text.'</div>';
+
+            }
+        ?>
     </div>
     <div>
         テキスト拡大
         <?php echo '<div class=card_text_detail>'.$text.'</div>'?>
     </div>
 <br><br>
-    <button type="submit" onclick="history.back()">修正する</button>
+    <button type="button" onclick="history.back()">修正する</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script>
+        $.cookie('val');
+    </script>
 </body>
 </html>
