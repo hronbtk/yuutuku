@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+.wrapper{
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+.name_wrapper{
+    background-color: #000;
+}
+.hurigana{
+    color: #fff;
+}
+.card_name{
+    color: #fff;
+    font-weight: 550;
+    font-size: 32px;
+}
+.body_wrapper{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card_text_detail{
+    border: 1px solid ;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 2px 2px #333;
+    th{
+        border-right: 1px solid #888;
+        border-bottom: 1px solid #888;
+    }
+    td{
+        border-right: 1px solid #888;
+        border-bottom: 1px solid #888;
+    }
+}
