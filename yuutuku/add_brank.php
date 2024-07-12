@@ -1,0 +1,30 @@
+<?php
+require_once('common.php');
+$post=sanitize($_POST);
+$kinds=$post['kinds'];
+$card_name=$post['cardname'];
+$hurigana=$post['card_name_hurigana'];
+$card_image=$_FILES['cardimage'];
+$kinds_monster=$post['kinds-monster'];
+$element=$post['element'];
+$species=$post['species'];
+$lebel=$post['lebel'];
+$text=$post['text'];
+$atk=$post['atk'];
+$def=$post['def'];
+if(isset($post['penduramu'])){
+    $pORnot=$post['penduramu'];
+}
+if(isset($post['penduramu_text'])){
+    $penduramu_text=$post['penduramu_text'];
+}
+if(isset($post['scale'])){
+    $penduramu_scale=$post['scale'];
+}
+if($kinds=='monster'){
+    header('Location:add_check_monster.php');
+}elseif($kinds=='magic'){
+    header('Location:add_check_magic.php');
+}else{
+    header('Location:add_check_trap.php');
+}
