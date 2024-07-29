@@ -1,0 +1,11 @@
+<?php
+if(isset($_GET['edit'])){
+    $name=$_GET['name'];
+    $kinds=$_GET['kinds'];
+    header('Location:edit.php?name='.$name.'&kinds='.$kinds);
+}
+if(isset($_GET['delete'])){
+    $name=$_GET['name'];
+    $kinds=$_GET['kinds'];
+    header('Location:delete.php?name='.$name.'&kinds='.$kinds);
+}

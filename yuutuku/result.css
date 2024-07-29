@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+.wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1080px;
+    max-width: 0 auto;
+}
+.card_box{
+    width: 25%;
+}
